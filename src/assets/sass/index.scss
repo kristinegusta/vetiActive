@@ -1,0 +1,418 @@
+/*-- -------------------------- -->
+<---        Index Styles         -->
+<--- -------------------------- -*/
+
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+    #hero {
+        padding: 0 calc(16 / 16 * 1rem);
+        padding-bottom: calc(100 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+        /* prevents overflow from the lines extending past the screen width */
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: var(--mainHeaderFontSize);
+            color: var(--primaryLight);
+            font-weight: 500;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .logo-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 columns with equal width */
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .button-container,
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-logo {
+            background-color: var(--primary);
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-logo-text {
+            font-family: "Montserrat", Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--primaryLight);
+            font-size: calc(16 / 16 * 0.7rem);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .kg-hero-picture {
+            /* Background Image */
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+
+            &:before {
+                /* Black Color Overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.5;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* Makes image act like a background-image */
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+    }
+
+    /*-- -------------------------- -->
+    <---          About, lessons section     -->
+    <--- -------------------------- -*/
+    #about,
+    #lessons,
+    #stabling {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: var(--maxWidth);
+            margin: auto;
+
+            a {
+                color: var(--primaryLight);
+                background-color: var(--primary);
+                outline: none;
+                padding: 11px 18px;
+                border: none;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-family: "Montserrat", Arial, sans-serif;
+                font-size: 0.7rem;
+                display: inline-block;
+            }
+
+            picture {
+                width: 100%;
+
+                img {
+                    margin-top: 2rem;
+                    min-width: 300px;
+                }
+            }
+        }
+
+    }
+
+    /*-- -------------------------- -->
+    <---          Training section     -->
+    <--- -------------------------- -*/
+
+    #training {
+        .image-full-width {
+            display: none;
+        }
+
+        .text-full-width {
+            background-color: var(--primary);
+            padding: var(--sectionPadding);
+
+            h2,
+            p,
+            ul {
+                color: var(--primaryLight);
+            }
+
+            a {
+                color: var(--primaryLight);
+                background-color: var(--headerColor);
+                outline: none;
+                padding: 11px 18px;
+                border: none;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-family: "Montserrat", Arial, sans-serif;
+                font-size: 0.7rem;
+                display: inline-block;
+                margin-top: 2rem;
+            }
+
+            ul {
+                list-style-type: none;
+                /* Remove default bullet points */
+                padding: 0;
+                /* Remove default padding */
+            }
+
+            li::before {
+                content: "\2713";
+                color: inherit;
+                font-size: 1.4em;
+                margin-right: 0.5em;
+            }
+
+        }
+    }
+
+    #sale {
+        background-color: var(--secondary);
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: var(--maxWidth);
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            h2,
+            p {
+                color: var(--primaryLight);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h2,
+            h2+p {
+                text-align: center;
+            }
+
+            .logo {
+                text-align: center;
+            }
+
+            p {
+                max-width: 550px;
+                color: var(--bodyTextColorWhite);
+            }
+        }
+
+        .sales-card-link {
+            transition: all 0.5s ease;
+
+            &:hover {
+                opacity: 0.3;
+            }
+        }
+
+        .see-all-sales {
+            color: var(--primary);
+            outline: none;
+            padding: 11px 28px;
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-top: 2rem;
+            border: 1px solid var(--primary);
+
+        }
+
+        .sales-img {
+            width: 100%;
+            height: 250px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sales-card {
+            margin-bottom: 3rem;
+            max-width: 415px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sales-header {
+            font-family: "Montserrat", Arial, sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 0;
+
+            .sold {
+                color: #D22323;
+                font-weight: 600;
+            }
+
+            .info {
+                color: var(--primaryLight);
+                font-weight: 500;
+
+                span {
+                    margin-right: 6px;
+                }
+            }
+        }
+
+        .sales-body {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+    }
+
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+    #hero {
+        /* 32px - 40px */
+        padding: 0 clamp(2em, 5vw, 2.5em);
+
+        .button-logo {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    #about,
+    #lessons,
+    #stabling {
+        .cs-container {
+            display: flex;
+            justify-content: space-between;
+
+            picture img {
+                margin-top: 0;
+            }
+        }
+
+        .text-container {
+            max-width: 65ch;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 1rem;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    #lessons {
+        .cs-container {
+            flex-direction: row-reverse;
+        }
+
+        .text-container {
+            padding-right: none;
+            padding-left: 1rem;
+        }
+
+        .img-container {
+            max-width: 500px;
+        }
+    }
+
+    #stabling {
+        .img-container {
+            max-width: 500px;
+        }
+    }
+
+    #training {
+        display: flex;
+
+        .image-full-width {
+            display: block;
+            width: 50%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-full-width {
+            width: 50%
+        }
+    }
+
+    #sale {
+        .sales-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Create three columns with equal width */
+            gap: 20px;
+
+        }
+    }
+}
+
+/* Desktop Parallax Effect - 1300px */
+@media only screen and (min-width: 81.25em) {
+    #training {
+        .image-full-width {
+            width: 40%;
+        }
+
+        .text-full-width {
+            width: 60%;
+
+            .text-container {
+                max-width: 75ch;
+                padding-left: 100px;
+            }
+        }
+    }
+}
