@@ -1,0 +1,136 @@
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-975 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            column-gap: calc(20 / 16 * 1rem);
+            /* 28px - 40px */
+            row-gap: clamp(1.75rem, 3vw, 2.5rem);
+        }
+
+        .cs-menu-group {
+            max-width: calc(600 / 16 * 1rem);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* 28px - 40px */
+            gap: clamp(1.75rem, 3vw, 2.5rem);
+        }
+
+        .cs-menu-item {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-h3 {
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            gap: calc(24 / 16 * 1rem);
+
+            &:before {
+                /* grey line */
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: #e8e8e8;
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: calc(13 / 16 * 1rem);
+                left: 0;
+                z-index: -1;
+            }
+        }
+
+        .cs-header {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            text-align: inherit;
+            max-width: calc(400 / 16 * 1rem);
+            padding-right: calc(8 / 16 * 1rem);
+            color: var(--headerColor);
+            background-color: #fff;
+        }
+
+        .cs-price {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            font-weight: 400;
+            padding-left: calc(8 / 16 * 1rem);
+            color: var(--headerColor);
+            background-color: #fff;
+        }
+
+        .cs-menu-text {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-975 {
+        .cs-menu {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-menu-group {
+            width: 100%;
+        }
+    }
+}
