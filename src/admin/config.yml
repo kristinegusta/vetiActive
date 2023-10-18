@@ -16,11 +16,25 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Vārds", name: "title", widget: "string" }
+      - {
+          label: "Dzimums",
+          name: "gender",
+          widget: "select",
+          options: ["Ķēve", "Kastrāts", "Ērzelis"],
+          default: ["Ķēve"],
+        }
+      - {
+          label: "Pārdots",
+          name: "sold",
+          widget: "select",
+          options: ["Pārdots", "Pieejams"],
+          default: ["Pieejams"],
+        }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Image Caption", name: "imageAlt", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Dzimšanas gads", name: "year", widget: "string" }
+      - { label: "Īsais apraksts", name: "description", widget: "string" }
+      - { label: "Sludināuma datums", name: "date", widget: "datetime" }
+      - { label: "Galvenā bilde", name: "image", widget: "image" }
+      - { label: "Bildes nosaukums", name: "imageAlt", widget: "string" }
+      - { label: "Pilnais apraksts", name: "body", widget: "markdown" }

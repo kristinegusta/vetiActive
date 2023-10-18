@@ -194,69 +194,38 @@ order: 100
                 eiusmod tempor posuere molestie lorem lectus interdum augue</p>
         </article>
         <div class="sales-cards">
-            <a href="/" class="sales-card-link">
+            {% if collections.post | length == 0 %}
+            <h2>Šobrīd nav zirgu pārdošanā.</h2>
+            {% else %}
+            {% set sortedPosts = collections.post | reverse %}
+            {%- for post in sortedPosts.slice(0, 3) -%}
+
+            <a href="{{ post.url }}" class="sales-card-link">
                 <div class="sales-card">
                     <div class="sales-img">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/blog/sale1.jpg"
-                            alt="horse for sale" width="100%" height="auto" loading="eager">
+                        <img aria-hidden="true" decoding="async" src="{{ post.data.image }}"
+                            alt="{{ post.data.imageAlt }}" width="100%" height="auto" loading="eager">
                     </div>
                     <div class="sales-header">
                         <div class="info">
-                            <span class="name">Novita Z</span>
-                            <span class="gender">Ķēve</span>
+                            <span class="name">{{ post.data.title}}</span>
+                            <span class="gender">{{ post.data.gender }}</span>
                             <span class="birth">05/2016</span>
                         </div>
-                        <span class="sold">Pārdots</span>
+                        <span class="sold">
+                            {% if post.data.sold== "Pārdots" %}
+                            {{ post.data.sold }}
+                            {% endif %}</span>
                     </div>
                     <div class="sales-body">
                         <p>
-                            Ķēve ar potenciālu, piemērota jebkura līmeņa jātniekam, ar sacensību pieredzi.
+                            {{ post.data.description }}
                         </p>
                     </div>
                 </div>
             </a>
-            <a href="/" class="sales-card-link">
-                <div class="sales-card">
-                    <div class="sales-img">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/blog/sale2.jpg"
-                            alt="horse for sale" width="100%" height="auto" loading="eager">
-                    </div>
-                    <div class="sales-header">
-                        <div class="info">
-                            <span class="name">Iced</span>
-                            <span class="gender">Kastrāts</span>
-                            <span class="birth">05/2016</span>
-                        </div>
-                        <span class="sold">Pārdots</span>
-                    </div>
-                    <div class="sales-body">
-                        <p>
-                            Ķēve ar potenciālu, piemērota jebkura līmeņa jātniekam, ar sacensību pieredzi.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a class="sales-card-link" href="/">
-                <div class="sales-card">
-                    <div class="sales-img">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/blog/sale3.jpg"
-                            alt="horse for sale" width="100%" height="auto" loading="eager">
-                    </div>
-                    <div class="sales-header">
-                        <div class="info">
-                            <span class="name">Novita Z</span>
-                            <span class="gender">Ķēve</span>
-                            <span class="birth">05/2016</span>
-                        </div>
-                        <span class="sold"></span>
-                    </div>
-                    <div class="sales-body">
-                        <p>
-                            Ķēve ar potenciālu, piemērota jebkura līmeņa jātniekam, ar sacensību pieredzi.
-                        </p>
-                    </div>
-                </div>
-            </a>
+            {%- endfor -%}
+            {% endif %}
         </div>
         <a href="/tirgus" class="see-all-sales">Apskatīt visus</a>
     </div>
