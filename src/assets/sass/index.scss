@@ -112,7 +112,7 @@
     }
 
     /*-- -------------------------- -->
-    <---    About, lessons section     -->
+    <---    About, lessons, breeding section     -->
     <--- -------------------------- -*/
     #about,
     #lessons,
@@ -135,6 +135,21 @@
                 font-family: "Montserrat", Arial, sans-serif;
                 font-size: 0.7rem;
                 display: inline-block;
+            }
+
+            .group {
+                margin-bottom: 1rem;
+
+                span {
+                    font-weight: 600;
+                    color: var(--secondary);
+                }
+
+                ul {
+                    li {
+                        list-style: none;
+                    }
+                }
             }
 
             picture {
