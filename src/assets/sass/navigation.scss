@@ -69,6 +69,7 @@
             width: 40%;
             max-width: calc(146 / 16 * 1rem);
             height: 100%;
+            max-height: 80px;
             margin: 0 auto 0 0;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
@@ -83,6 +84,7 @@
             img {
                 width: 100%;
                 height: 100%;
+                max-height: 80px;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
                 /* places the image to the left edge of the parent */
@@ -565,7 +567,7 @@
         .cs-logo {
             width: 18.4%;
             max-width: calc(350 / 16 * 1rem);
-            height: calc(65 / 16 * 1rem);
+            height: calc(90 / 16 * 1rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
