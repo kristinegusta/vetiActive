@@ -21,7 +21,7 @@
         /* h1 */
         --mainHeaderFontSize: clamp(2.3rem, 4.5vw, 3.8625rem);
         /* h1 interior pages */
-        --mainInteriorHeaderFontSize: clamp(2.1rem, 4.1vw, 3.3625rem);
+        --mainInteriorHeaderFontSize: clamp(1.8rem, 3.5vw, 2.8rem);
         /* 31px - 49px */
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1rem;
@@ -396,53 +396,106 @@
     }
 }
 
-#cta {
-    background-color: var(--secondary);
-    padding: clamp(2.75rem, 4.82vw, 6.25rem) 1rem;
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
 
-    .cs-container {
-        width: 100%;
-        max-width: var(--maxWidth);
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cta-51 {
+        padding: var(--sectionPadding);
+        position: relative;
 
-        h2 {
-            color: var(--primaryLight);
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        h2+p {
-            text-align: center;
-            color: var(--bodyTextColorWhite);
-            font-weight: 600;
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
             margin: auto;
-            font-size: 0.9rem;
-            max-width: 65ch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
         }
 
-        a {
-            color: var(--primaryLight);
-            background-color: var(--primary);
-            outline: none;
-            padding: 11px 28px;
-            border: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-family: "Montserrat", Arial, sans-serif;
-            font-size: 0.7rem;
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
             display: flex;
-            width: fit-content;
-            margin-top: 2rem;
-            justify-content: center;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
             align-items: center;
+        }
+
+        .cs-title {
+            color: var(--primaryLight);
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            font-weight: 800;
+            color: var(--primaryLight);
+            opacity: 0.8;
+            max-width: 80ch;
+
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.675rem, 4.5vw, 2.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            color: var(--secondary);
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
+            position: relative;
+            font-family: "Montserrat", Arial, sans-serif;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+        }
+
+        .cs-picture {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* black color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: 0.8;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
 
             img {
-                margin-right: 4px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
