@@ -1,0 +1,327 @@
+/*-- -------------------------- -->
+<---     Horse Physio           -->
+<--- -------------------------- -*/
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+    #RPsbs-74,
+    #RPsbsr-74 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(542 / 16 * 1rem);
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4 / 16 * 1rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-picture {
+            width: 95%;
+            max-width: calc(550 / 16 * 1rem);
+            margin: 0;
+            position: relative;
+            display: block;
+            /* width divided by height */
+            aspect-ratio: 312/335;
+            border-radius: 6px;
+            z-index: 1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+
+    #RPsbs-74,
+    #RPsbsr-74 {
+
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: flex-start;
+            /* 60px - 128px */
+            gap: clamp(3.75rem, 9.5vw, 8rem);
+        }
+
+        .cs-picture {
+            /* 328px - 502px */
+            width: clamp(20.5rem, 37.5vw, 31.375rem);
+            /* 440px - 520px */
+            height: clamp(27.5rem, 40vw, 32.5rem);
+            /* 16px - 20px */
+            margin: 0 0 0 clamp(1rem, 5vw, 1.25rem);
+            flex: none;
+        }
+
+        .cs-content {
+            width: 45%;
+            margin: 0;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+    #RPsbsr-74 {
+        .cs-container {
+            justify-content: flex-end;
+        }
+
+        .cs-picture {
+            /* 16px - 20px */
+            margin-right: clamp(1rem, 5vw, 1.25rem);
+            /* forces it to the left */
+            order: 2;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 0) {
+    #RPsbsr-74 {
+        background-color: #1c1c1c;
+
+        .cs-text,
+        .cs-title {
+            color: var(--bodyTextColorWhite);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-566 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            h2 {
+                text-align: center;
+                width: 100%;
+            }
+
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: calc(522 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            margin: auto;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.5vw, 1.15rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            /* 32px - 60px top & bottom */
+            /* 16px - 48px left & right */
+            padding: clamp(2rem, 6.15vw, 3.75rem) clamp(1rem, 4.15vw, 3rem);
+            background-color: #f1f1f4;
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .cs-stars {
+            /* 169px - 189px */
+            width: clamp(10.5625rem, 20vw, 11.8125rem);
+            height: auto;
+            /* 20px - 24px */
+            margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+            display: block;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            /* 40px - 64px */
+            margin-bottom: clamp(2.5rem, 8vw, 4rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-flex-group {
+            /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+            margin-top: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: calc(20 / 16 * 1rem);
+        }
+
+        .cs-profile {
+            width: calc(80 / 16 * 1rem);
+            height: calc(80 / 16 * 1rem);
+            border-radius: 50%;
+            /* clips image corners to make circle */
+            overflow: hidden;
+            position: relative;
+            display: block;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes the image behave like a background image */
+                object-fit: cover;
+            }
+        }
+
+        .cs-name {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            line-height: 1.5em;
+            font-weight: 700;
+            margin: 0 0 calc(8 / 16 * 1rem) 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-job {
+            /* 13px - 16px */
+            font-size: clamp(0.8125rem, 1.6vw, 1rem);
+            line-height: 1.2em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            display: block;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+    #reviews-566 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+    }
+}

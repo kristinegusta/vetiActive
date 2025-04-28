@@ -1,0 +1,134 @@
+---
+title: 'Horse Physiotherapy'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'horse/'
+eleventyNavigation:
+    key: Horse
+    order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/horse.css">
+<link rel="stylesheet" href="/assets/css/interior.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Physiotherapy for Horses</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/horse.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/horse.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/horse.jpg" alt="horse physiotherapist"
+            loading="eager" width="2500" height="1667">
+    </picture>
+
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+
+<section id="RPsbs-74">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/horse1.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/horse1.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/horse1.jpg" alt="Binnenboordmotoren" width="500"
+                height="552" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <h2 class="cs-title">Supporting horse health, performance & well-being</h2>
+            <p class="cs-text">
+                Is your horse feeling stiff, uncomfortable, or not performing as well as usual? Whether they’re
+                recovering from an injury, dealing with muscle tension, or showing subtle signs of discomfort,
+                physiotherapy can make a difference! </p>
+            <p class="cs-text">
+                By combining soft tissue therapy, joint mobilization, high-power laser therapy, and targeted exercises,
+                I help reduce pain, improve movement, and support recovery. A full assessment—both in motion and through
+                hands-on examination—allows me to identify problem areas and create a treatment plan that helps your
+                horse feel and perform at their best. </p>
+            <p class="cs-text">
+                This version keeps the structure and tone consistent across both sections while making them clear and
+                engaging. Let me know if you’d like any changes!</p>
+        </div>
+    </div>
+    <!-- ============================================ -->
+    <!--                  Reviews                     -->
+    <!-- ============================================ -->
+
+    <section id="reviews-566">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">What Our Clients Say</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <!--Blue Quote-->
+                    <img class="cs-stars" aria-hidden="true"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async"
+                        alt="quote icon" width="189" height="24">
+                    <p class="cs-item-text">
+                        Elizabeth helpt ons echt super met het beleren van mijn jonge paard. Zij is in juli 2023 gekomen
+                        en
+                        echt vanaf nul begonnen. Ze heeft een band opgebouwd met Palermo en vanuit daar alles erg rustig
+                        aangepakt.
+                        Tot op de dag van vandaag komt Elizabeth nogsteeds en daar ben ik erg dankbaar voor. Palermo kan
+                        nogal wat spanning opbouwen maar Elizabeth weet daar precies hoe mee om te gaan en op te lossen.
+                        Door een ongeluk en mijn zwangerschap komt Palermo toch nog onder het zadel en kan zij heb
+                        lekker
+                        doortrainen.
+                        Helaas gaan wij ver verhuizen waardoor wij afscheid van elkaar gaan nemen, maar Elizabeth is
+                        altijd
+                        welkom en ik hoop zeker dat zij nog eens langskomt bij ons thuis.
+                    </p>
+                    <div class="cs-flex-group">
+                        <span class="cs-name">
+                            Lisa Vermeulen - Westen
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <!--Blue Quote-->
+                    <img class="cs-stars" aria-hidden="true"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async"
+                        alt="quote icon" width="189" height="24">
+                    <p class="cs-item-text">
+                        Wat een ontzettend fijne meid! Mijn merrie was niet makkelijk met zadelmak maken, maar Elisabeth
+                        heeft zo ontzettend veel geduld. Ze weet wat ze doet en is daarin duidelijk naar eigenaar en
+                        paard.
+                        Mijn paard kneep van de spanning en ging rennen bij paniek. Door herhalen, belonen,
+                        duidelijkheid en
+                        vertrouwen heeft ze dit paard goed zadelmak gemaakt.
+                        Dit was het eerste jaar dat ik niet zelf mijn paard zadelmak maakte, dus ik vond het moeilijk om
+                        los
+                        te laten. Maar toen wij Elisabeth aan het werk zagen, wisten wij dat het goed zat.
+                        Wij houden van duidelijk communicatie richting het paard, dat hij weet wat van hem verwacht
+                        wordt.
+                        Dit geeft structuur en vertrouwen. En dat vinden wij de basis.
+                        Elisabeth heeft dit perfect uitgevoerd en heeft het paard een perfecte basis gegeven.
+                        Elisabeth, wij gaan je nog missen!
+                    </p>
+                    <div class="cs-flex-group">
+                        <span class="cs-name">
+                            Elise van Rooijen
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,79 @@
+---
+title: 'Human Physiotherapy'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'human/'
+eleventyNavigation:
+    key: Human
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/human.css">
+<link rel="stylesheet" href="/assets/css/interior.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Physiotherapy for Humans</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/about-us.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/about-us.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/about-us.jpg" alt="horses">
+    </picture>
+
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-2201">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Personalized Rehabilitation & Physiotherapy</h2>
+            <p class="cs-text">
+                Feeling stiff, in pain, or recovering from an injury? Whether you’re dealing with muscle tension, joint
+                pain, or movement restrictions, physiotherapy can help you feel and function better.
+            </p>
+            <p class="cs-text">
+                Through hands-on treatment, targeted exercises, and movement retraining, I work to reduce pain, improve
+                mobility, and support recovery. My goal is to help you move more freely, feel stronger, and get back to
+                doing what you love—whether that’s sports, daily activities, or simply living without discomfort.
+            </p>
+        </div>
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/about2.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/about2.jpeg">
+                <img loading="lazy" decoding="async" src="/assets/images/about2.jpeg" alt="human-phyio" width="272"
+                    height="337">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)"
+                    srcset="/assets/images/about2.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                    srcset="/assets/images/about2.jpeg">
+                <img loading="lazy" decoding="async"
+                    src="/assets/images/about2.jpeg" alt="wedding"
+                    width="243" height="367">
+            </picture>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

@@ -4,8 +4,8 @@ description: 'Meta description for the page'
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
 eleventyNavigation:
-key: Home
-order: 100
+    key: Home
+    order: 100
 ---
 
 {% extends "layouts/base.html" %}
@@ -41,7 +41,7 @@ order: 100
 <section id="hero">
     <div class="logo-container">
         <div class="buttons-container">
-            <a href="/tirgus">
+            <a href="/horse">
                 <div class="button-container">
                     <div class="button-logo">
                         <img aria-hidden="true" decoding="async" src="/assets/images/buttons/horse-logo.svg"
@@ -49,15 +49,7 @@ order: 100
                     </div>
                 </div>
             </a>
-            <a href="/apmaciba">
-                <div class="button-container">
-                    <div class="button-logo">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/buttons/dog.svg" alt="horse-logo"
-                            width="25px" height="auto" loading="eager">
-                    </div>
-                </div>
-            </a>
-            <a href="/izjades">
+            <a href="/human">
                 <div class="button-container">
                     <div class="button-logo">
                         <img aria-hidden="true" decoding="async" src="/assets/images/buttons/human.svg" alt="rider-logo"
@@ -65,7 +57,14 @@ order: 100
                     </div>
                 </div>
             </a>
-
+            <a href="/hound">
+                <div class="button-container">
+                    <div class="button-logo">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/buttons/dog.svg" alt="horse-logo"
+                            width="25px" height="auto" loading="eager">
+                    </div>
+                </div>
+            </a>    
         </div>
         <div class="logo-image-container">
             <h1>3H-Physio</h1>
@@ -134,15 +133,16 @@ order: 100
     <div class="text-full-width">
         <div class="text-container">
             <h2>Human, Hound, Horse</h2>
-            <p>Veti Active stallis piedāvā jaunzirgu apmācību atbilstoši zirga vecumam un sagatavotībai. Zirgi tiek
-                sagatavoti no pašiem pamatiem līdz sacensībām, atkarībā no klienta vēlmēm. </p>
+            <p>3H-Physio provides professional physiotherapy services for humans, dogs, and horses, helping to build
+                stronger, healthier, and more harmonious partnerships. </p>
             <ul>
-                <li>Jaunzirgu iejāšana no nulles</li>
-                <li>Zirgu sagatavošana konkūra sacencībām</li>
-                <li>Uzvedības problēmu labošana</li>
-                <li>Zirgu sagatavošana tirgum</li>
+                <li>Injury prevention and faster recovery</li>
+                <li>Improved mobility and muscle flexibility</li>
+                <li>Pain relief and overall well-being</li>
+                <li>Improved quality of life for senior and active animals</li>
+                <li>Optimized sports performance</li>
             </ul>
-            <a href="/apmaciba">Contact 3H-Physio</a>
+            <a href="/contact">Contact 3H-Physio</a>
         </div>
     </div>
 </section>
@@ -210,9 +210,9 @@ order: 100
         <div class="cs-content">
             <h2 class="cs-title">Physiotherapy in Netherlands</h2>
             <p class="cs-text">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-                enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-                officia consequat duis enim velit mollit.
+                At 3H-Physio, we offer specialized physiotherapy services for horses, dogs, and humans across the
+                Netherlands. Whether you are seeking rehabilitation after an injury, improving athletic performance, or
+                supporting long-term health, our tailored programs are designed to meet individual needs.
             </p>
         </div>
         <ul class="cs-card-group">
@@ -223,7 +223,10 @@ order: 100
                             src="/assets/images/buttons/horse-logo.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">Horse</h3>
-                    <p class="cs-item-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p class="cs-item-text"> Personalized rehabilitation after injury, performance optimization for
+                        sport or
+                        recreational horses,
+                        preventative care, and mobility improvement for horses of all ages and disciplines.</p>
                     <a href="" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
@@ -240,7 +243,9 @@ order: 100
                             src="/assets/images/buttons/human.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">Human</h3>
-                    <p class="cs-item-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p class="cs-item-text">Treatment of musculoskeletal issues, recovery after sports injuries, posture
+                        correction, and strength training programs designed for riders and active individuals.
+                    </p>
                     <a href="" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
@@ -257,13 +262,15 @@ order: 100
                             src="/assets/images/buttons/dog.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">Hound</h3>
-                    <p class="cs-item-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p class="cs-item-text">Recovery support after surgery or injury, mobility maintenance for senior
+                        dogs, athletic support for working and sporting dogs, and behavioral well-being through physical
+                        health.</p>
                     <a href="" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/services-dog.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/services-dog.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/services-dog.jpg"
+                    <source media="(max-width: 600px)" srcset="/assets/images/fedra_baby.jpeg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/fedra_baby.jpeg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/fedra_baby.jpeg"
                         alt="leaves" width="345" height="428">
                 </picture>
             </li>

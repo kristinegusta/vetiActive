@@ -1,0 +1,125 @@
+---
+title: 'Dog Physiotherapy'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'hound/'
+eleventyNavigation:
+    key: Hound
+    order: 500
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/hound.css">
+<link rel="stylesheet" href="/assets/css/interior.css">
+
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Physiotherapy for Hounds</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/about-us.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/about-us.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/about-us.jpg" alt="horses">
+    </picture>
+
+</section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-1645">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Canine Rehabilitation & Physiotherapy</h2>
+            <p class="cs-text">
+                Is your four-legged friend not as eager for walks lately? Whether they’re feeling stiff from arthritis,
+                recovering from surgery, or just not moving as freely as before, physiotherapy can help!
+            </p>
+            <p class="cs-text">
+                Through hands-on treatment and tailored exercises, I work to reduce your dog’s pain, improve mobility,
+                and restore comfort. My goal is to help them move more easily so you can both get back to enjoying
+                walks, playtime, and everyday adventures together.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Movement Therapy</h3>
+                    <p class="cs-item-text">We focus on improving your dog's mobility, restoring their ability to walk,
+                        run, and play with ease.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Injury Rehabilitation</h3>
+                    <p class="cs-item-text">We help your dog recover from injuries, whether they’re recent or from past
+                        trauma, with personalized care plans.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Post-Surgery Recovery</h3>
+                    <p class="cs-item-text">Assist your dog in recovering after surgery with specialized exercises and
+                        treatment to reduce pain and promote healing.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Arthritis Management</h3>
+                    <p class="cs-item-text">We offer effective strategies to help manage arthritis, easing discomfort
+                        and improving your dog's quality of life.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section id="services-1083" style="padding-top: 1rem;">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/fedra.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/fedra.jpeg">
+                    <img loading="lazy" decoding="async" src="/assets/images/fedra.jpeg" alt="Bimini top" width="413"
+                        height="240" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/fedra_baby.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/fedra_baby.jpeg">
+                    <img loading="lazy" decoding="async" src="/assets/images/fedra_baby.jpeg" alt="Inbouw console"
+                        width="413" height="240" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/fedra_baby.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/fedra_baby.jpeg">
+                    <img loading="lazy" decoding="async" src="/assets/images/fedra_baby.jpeg" alt="Navigatie"
+                        width="413" height="240" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+{% endblock %}

@@ -23,7 +23,7 @@
         /* h1 interior pages */
         --mainInteriorHeaderFontSize: clamp(1.8rem, 3.5vw, 2.8rem);
         /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+        --headerFontSize: clamp(1.675rem, 3.9vw, 38px);
         --bodyFontSize: 1rem;
 
         /* 60px - 100px top and bottom */
@@ -232,6 +232,7 @@
             row-gap: calc(8 / 16 * 1rem);
             /* 28px - 40px */
             column-gap: clamp(1.75rem, 4vw, 2.5rem);
+            color: white;
         }
 
         .cs-li {
@@ -433,7 +434,7 @@
 
         .cs-text {
             margin-bottom: calc(16 / 16 * 1rem);
-            font-weight: 800;
+            font-family: "Montserrat", Arial, sans-serif;
             color: var(--primaryLight);
             opacity: 0.8;
             max-width: 80ch;
