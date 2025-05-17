@@ -101,7 +101,7 @@
             height: calc(60 / 16 * 1rem);
             margin: 0;
             border-radius: 50%;
-            border: 1px solid #bababa;
+            background-color: var(--secondary);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -168,6 +168,7 @@
             border: none;
             /* prevents padding from adding to height and width */
             box-sizing: border-box;
+            font-family: "Montserrat", Arial, sans-serif;
 
             &::placeholder {
                 color: #7d799c;

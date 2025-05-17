@@ -5,8 +5,8 @@ feel their best!'
 preloadImg: '/assets/images/about-us.jpg'
 permalink: 'contact/'
 eleventyNavigation:
-    key: Contact
-    order: 600
+key: Contact
+order: 600
 ---
 
 {% extends "layouts/base.html" %}
@@ -48,30 +48,30 @@ eleventyNavigation:
             <ul class="cs-ul">
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-76.svg"
-                            alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                        <img aria-hidden="true" src="/assets/images/buttons/phone.svg" alt="phone icon" class="cs-icon"
+                            width="40" height="40" decoding="async">
                     </picture>
                     <div class="cs-flex-group">
                         <span class="cs-header">Phone</span>
-                        <a href="tel:888-4565-789
+                        <a href="tel:+31622132763
                         " class="cs-link">+31 622132763
                         </a>
                     </div>
                 </li>
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg"
-                            alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        <img aria-hidden="true" src="/assets/images/buttons/mail.svg" alt="address icon" class="cs-icon"
+                            width="40" height="40" decoding="async">
                     </picture>
                     <div class="cs-flex-group">
                         <span class="cs-header">E-mail</span>
-                        <a href="mailto:Email@stitch.com" class="cs-link">info@3hphysio.nl</a>
+                        <a href="mailto:info@3hphysio.nl" class="cs-link">info@3hphysio.nl</a>
                     </div>
                 </li>
             </ul>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-1388" name="Contact Form" method="post">
+        <form class="cs-form" id="cs-form-1388" name="Contact" method="post" netlify>
             <label class="cs-label">
                 Name
                 <input class="cs-input" required type="text" id="name-1388" name="name"
