@@ -30,6 +30,19 @@
         --sectionPadding: clamp(3.75rem, 7.82vw, 9.25rem) 1rem;
     }
 
+    .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: .1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+
+
     p {
         font-size: var(--bodyFontSize);
         line-height: 1.5em;
@@ -257,12 +270,11 @@
         }
 
         .cs-logo {
-            font-family: "Montserrat", Arial, sans-serif;
-            color: var(--primaryLight);
-            font-weight: 600;
-            text-align: center;
-            max-width: 250px;
-            font-size: 24px;
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 200px;
+            }
         }
 
         p {
