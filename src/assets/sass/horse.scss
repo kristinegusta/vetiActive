@@ -116,7 +116,7 @@
 
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
-            flex-direction: row;
+            flex-direction: row-reverse;
             justify-content: flex-start;
             /* 60px - 128px */
             gap: clamp(3.75rem, 9.5vw, 8rem);
