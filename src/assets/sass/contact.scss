@@ -25,6 +25,24 @@
             position: relative;
         }
 
+        h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .cs-languages {
+            display: flex;
+
+            .cs-languages-wrapper {
+                display: flex;
+                padding-right: 1.5rem;
+
+                p {
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+
         .cs-content {
             /* set text align to left if content needs to be left aligned */
             text-align: left;
@@ -64,7 +82,7 @@
             list-style: none;
             display: flex;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
             gap: calc(20 / 16 * 1rem);
 
             &:hover {
