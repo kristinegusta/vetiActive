@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd" viewBox="64 110 390 290">
+    <path d="M0 0h512v512H0" style="fill:none;fill-rule:nonzero"/>
+    <path d="M434 156.48c0-15.719-12.761-28.48-28.48-28.48H106.48C90.761 128 78 140.761 78 156.48v199.04C78 371.239 90.761 384 106.48 384h299.04c15.719 0 28.48-12.761 28.48-28.48z" style="fill:none;stroke-width:30px;stroke:#0F102C"/>
+    <path d="m305 256 129 128M207 256 78 384m0-256 165 164c7 8 19 8 26 0l165-164" style="fill:none;fill-rule:nonzero;stroke:#0F102C;stroke-width:30px" transform="matrix(.9558 0 0 .93467 11.853 17.529)"/>
+</svg>

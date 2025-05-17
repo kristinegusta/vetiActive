@@ -215,7 +215,8 @@
             font-weight: 700;
             text-align: center;
             margin: 0;
-            color: #fff;
+            font-family: "Montserrat", Arial, sans-serif;
+            color: var(--secondary);
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(24 / 16 * 1rem);
             background-color: var(--primary);
