@@ -209,7 +209,7 @@
         }
 
         .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
+            font-size: calc(16 / 16 * 0.8rem);
             /* 46px - 56px */
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             text-decoration: none;
@@ -227,6 +227,7 @@
             z-index: 1;
             /* prevents padding from adding to the width */
             box-sizing: border-box;
+            text-transform: uppercase;
 
             &:before {
                 content: "";
