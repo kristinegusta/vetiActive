@@ -1,7 +1,7 @@
 ---
 title: 'Home'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
+description: 'Animal and human physiotherapy in Netherlands'
+preloadImg: '/assets/images/landing-desktop.jpg'
 permalink: '/'
 eleventyNavigation:
     key: Home
@@ -64,10 +64,10 @@ eleventyNavigation:
                             width="25px" height="auto" loading="eager">
                     </div>
                 </div>
-            </a>    
+            </a>
         </div>
         <div class="logo-image-container">
-            <h1>3H-Physio</h1>
+            <h1>3HPhysio</h1>
         </div>
         <div class="button-logo-text">
             Horse, human and hound physiotherapy
@@ -78,7 +78,7 @@ eleventyNavigation:
     <picture class="kg-hero-picture">
         <source media="(max-width: 1000px)" srcset="/assets/images/landing-mobile.jpg">
         <source media="(min-width: 1001px)" srcset="/assets/images/landing-desktop.jpg">
-        <img aria-hidden="true" decoding="async" src="/assets/images/landing-mobile.jpg" alt="new home" width="100%"
+        <img aria-hidden="true" decoding="async" src="/assets/images/landing-mobile.jpg" alt="Elizabete" width="100%"
             height="auto" loading="eager">
     </picture>
 </section>
@@ -91,9 +91,9 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="text-container">
             <article>
-                <h2>About 3H-Physio</h2>
+                <h2>About 3HPhysio</h2>
                 <p>
-                    At <strong>3HPhysio</strong>, we specialize in physiotherapy for horses, hounds, and humans—helping
+                    At <strong>3HPhysio</strong>, we specialize in physiotherapy for horses, humans, and hounds—helping
                     them move better,
                     feel better, and live happier lives.
                 </p>
@@ -116,7 +116,7 @@ eleventyNavigation:
         </div>
         <div class="img-container">
             <picture>
-                <img aria-hidden="true" decoding="async" src="/assets/images/about.jpg" alt="about us" width="100%"
+                <img aria-hidden="true" decoding="async" src="/assets/images/about.jpeg" alt="about me" width="100%"
                     height="auto" loading="eager" style="max-height: 700px;">
             </picture>
         </div>
@@ -133,7 +133,7 @@ eleventyNavigation:
     <div class="text-full-width">
         <div class="text-container">
             <h2>Human, Hound, Horse</h2>
-            <p>3H-Physio provides professional physiotherapy services for humans, dogs, and horses, helping to build
+            <p>3HPhysio provides professional physiotherapy services for humans, dogs, and horses, helping to build
                 stronger, healthier, and more harmonious partnerships. </p>
             <ul>
                 <li>Injury prevention and faster recovery</li>
@@ -142,64 +142,10 @@ eleventyNavigation:
                 <li>Improved quality of life for senior and active animals</li>
                 <li>Optimized sports performance</li>
             </ul>
-            <a href="/contact">Contact 3H-Physio</a>
+            <a href="/contact">Contact 3HPhysio</a>
         </div>
     </div>
 </section>
-
-<!-- ============================================ -->
-<!--                  For sale                   -->
-<!-- ============================================ -->
-<!-- 
-<section id="sale">
-    <div class="cs-container">
-        <article>
-            <div class="logo">
-                <img aria-hidden="true" decoding="async" src="/assets/images/buttons/shop-primary.svg" alt="shop-logo"
-                    width="30px" height="auto" loading="eager">
-            </div>
-            <h2>Zirgu tirgus</h2>
-            <p>Pārdošanā pašu audzēti, gan iepirkti sporta zirgi. Ar labiem jāšanas pamatiem, talantu un labiem
-                ciltsrakstiem.
-                Sazināties ar mums, lai varētu palīdzēt atrast Jums atrast labāko partneri.</p>
-        </article>
-        <div class="sales-cards">
-            {% if collections.post | length == 0 %}
-            <h2>Šobrīd nav zirgu pārdošanā.</h2>
-            {% else %}
-            {% set sortedPosts = collections.post | reverse %}
-            {%- for post in sortedPosts.slice(0, 3) -%}
-
-            <a href="{{ post.url }}" class="sales-card-link">
-                <div class="sales-card">
-                    <div class="sales-img">
-                        <img aria-hidden="true" decoding="async" src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}" width="100%" height="auto" loading="eager">
-                    </div>
-                    <div class="sales-header">
-                        <div class="info">
-                            <span class="name">{{ post.data.title}}</span>
-                            <span class="gender">{{ post.data.gender }}</span>
-                            <span class="birth">05/2016</span>
-                        </div>
-                        <span class="sold">
-                            {% if post.data.sold== "Pārdots" %}
-                            {{ post.data.sold }}
-                            {% endif %}</span>
-                    </div>
-                    <div class="sales-body">
-                        <p>
-                            {{ post.data.description }}
-                        </p>
-                    </div>
-                </div>
-            </a>
-            {%- endfor -%}
-            {% endif %}
-        </div>
-        <a href="/tirgus" class="see-all-sales">Apskatīt visus</a>
-    </div>
-</section> -->
 
 <!-- ============================================ -->
 <!--                  Services                    -->
@@ -210,7 +156,7 @@ eleventyNavigation:
         <div class="cs-content">
             <h2 class="cs-title">Physiotherapy in Netherlands</h2>
             <p class="cs-text">
-                At 3H-Physio, we offer specialized physiotherapy services for horses, dogs, and humans across the
+                At 3HPhysio, we offer specialized physiotherapy services for horses, dogs, and humans across the
                 Netherlands. Whether you are seeking rehabilitation after an injury, improving athletic performance, or
                 supporting long-term health, our tailored programs are designed to meet individual needs.
             </p>
@@ -249,9 +195,9 @@ eleventyNavigation:
                     <a href="/human" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/human.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/human.jpg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/human.jpg" alt="grass"
+                    <source media="(max-width: 600px)" srcset="/assets/images/human.jpeg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/human.jpeg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/human.jpeg" alt="human"
                         width="345" height="428">
                 </picture>
             </li>
@@ -268,10 +214,10 @@ eleventyNavigation:
                     <a href="/hound" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/fedra_baby.jpeg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/fedra_baby.jpeg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/fedra_baby.jpeg"
-                        alt="leaves" width="345" height="428">
+                    <source media="(max-width: 600px)" srcset="/assets/images/dog.jpeg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/dog.jpeg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/dog.jpeg" alt="dog"
+                        width="345" height="428">
                 </picture>
             </li>
         </ul>

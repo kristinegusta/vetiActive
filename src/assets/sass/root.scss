@@ -337,6 +337,17 @@
             }
         }
 
+        .cs-copyright-my-link {
+            font-size: inherit;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
         .cs-background {
             width: 100%;
             height: 100%;
