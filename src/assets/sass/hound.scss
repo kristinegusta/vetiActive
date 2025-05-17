@@ -481,8 +481,7 @@
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
+            text-align: left;
         }
 
         .cs-title {
