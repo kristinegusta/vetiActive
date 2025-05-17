@@ -160,6 +160,7 @@
             align-items: flex-start;
             gap: calc(12 / 16 * 1rem);
             position: relative;
+            padding-bottom: 1rem;
 
             &:before {
                 content: "";
