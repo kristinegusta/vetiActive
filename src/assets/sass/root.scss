@@ -299,7 +299,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: calc(8 / 16 * 1rem);
+            gap: calc(16 / 16 * 1rem);
         }
 
         .cs-social-li {
@@ -322,7 +322,7 @@
         }
 
         .cs-social-icon {
-            width: 25px;
+            width: 30px;
             height: auto;
             display: block;
             opacity: 0.8;
