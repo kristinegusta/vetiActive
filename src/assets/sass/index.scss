@@ -117,6 +117,7 @@
     #stabling {
         padding: var(--sectionPadding);
 
+
         .cs-container {
             width: 100%;
             max-width: var(--maxWidth);
@@ -152,12 +153,11 @@
             }
 
             picture {
-                width: 100%;
-
                 img {
                     margin-top: 2rem;
                     min-width: 300px;
                     border-radius: 0.5rem;
+                    width: 100%;
                 }
             }
         }
@@ -357,6 +357,7 @@
             justify-content: center;
             align-items: center;
             padding-right: 1rem;
+            min-width: 400px;
         }
 
         .img-container {
@@ -677,5 +678,12 @@
     #services-448 .cs-picture {
         /* 224px - 428px */
         height: clamp(14rem, 28vw, 26.75rem);
+    }
+
+    #about {
+        .img-container img {
+            width: auto;
+            max-height: 700px;
+        }
     }
 }

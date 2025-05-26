@@ -77,9 +77,9 @@ eleventyNavigation:
 
     <!-- Background Image -->
     <picture class="kg-hero-picture">
-        <source media="(max-width: 1000px)" srcset="/assets/images/landing-mobile.jpg">
+        <source media="(max-width: 1000px)" srcset="/assets/images/landing-desktop.jpg">
         <source media="(min-width: 1001px)" srcset="/assets/images/landing-desktop.jpg">
-        <img aria-hidden="true" decoding="async" src="/assets/images/landing-mobile.jpg" alt="Elizabete" width="100%"
+        <img aria-hidden="true" decoding="async" src="/assets/images/landing-desktop.jpg" alt="Elizabete" width="100%"
             height="auto" loading="eager">
     </picture>
 </section>
@@ -116,8 +116,7 @@ eleventyNavigation:
         <div class="img-container">
             <picture>
                 <img aria-hidden="true" decoding="async" src="/assets/images/about.jpeg"
-                    alt="Animal physiotherapist Elizabete" width="100%" height="auto" loading="eager"
-                    style="max-height: 700px;">
+                    alt="Animal physiotherapist Elizabete" width="100%" height="auto" loading="eager">
             </picture>
         </div>
     </div>
@@ -127,13 +126,17 @@ eleventyNavigation:
 
 <section id="training">
     <div class="image-full-width">
-        <img aria-hidden="true" decoding="async" src="/assets/images/horse-physio.jpg" alt="Back treatment of a horse"
-            width="100%" height="auto" loading="eager">
+        <picture>
+            <source media="(max-width: 1100px)" srcset="/assets/images/hand.jpg">
+            <source media="(min-width: 1101px)" srcset="/assets/images/horse-physio.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/hand.jpg" alt="Back treatment of a horse"
+                width="100%" height="auto" loading="eager">
+        </picture>
     </div>
     <div class="text-full-width">
         <div class="text-container">
             <h2>Horse, Hound, Human </h2>
-            <p>3HPhysio provides professional physiotherapy services for humans, dogs, and horses, helping to build
+            <p>3HPhysio provides professional physiotherapy services for horses, dogs, and humans, helping to build
                 stronger, healthier, and more harmonious partnerships. </p>
             <ul>
                 <li>Injury prevention and faster recovery</li>
