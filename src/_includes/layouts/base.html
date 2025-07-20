@@ -62,14 +62,25 @@
     <!--Screen reader skip main nav-->
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
+    {% if page.url and '/en' in page.url %}
+    {% include "components/header-en.html" %}
+    {% else %}
     {% include "components/header.html" %}
+    {% endif %}
     <main id="main">
         {% block body %}{% endblock %}
     </main>
-    {% if page.url != '/contact/' %}
+    {% if '/contact' not in page.url and '/en' not in page.url %}
     {% include "components/cta.html" %}
+    {% elif page.url != '/en/contact/' and '/en' in page.url %}
+    {% include "components/cta-en.html" %}
     {% endif %}
+
+    {% if page.url and '/en' in page.url %}
+    {% include "components/footer-en.html" %}
+    {% else %}
     {% include "components/footer.html" %}
+    {% endif %}
 
 </body>
 

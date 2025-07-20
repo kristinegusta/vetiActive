@@ -3,11 +3,11 @@ title: 'Home'
 description: 'Expert physiotherapy for horses, dogs, and humans in the Netherlands. Professional rehabilitation, injury
 prevention, and performance optimization by qualified physiotherapist Elizabete.'
 preloadImg: '/assets/images/landing-desktop.jpg'
-lang: nl
-permalink: '/'
+lang: en
+permalink: '/en/'
 eleventyNavigation:
-key: Home
-order: 100
+    key: Home
+    order: 100
 ---
 
 {% extends "layouts/base.html" %}
@@ -35,7 +35,6 @@ order: 100
 {% endblock %}
 
 {% block body %}
-
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
@@ -43,15 +42,15 @@ order: 100
 <section id="hero">
     <div class="logo-container">
         <div class="buttons-container">
-            <a href="/horse">
+            <a href="/en/horse">
                 <div class="button-container">
                     <div class="button-logo">
                         <img aria-hidden="true" decoding="async" src="/assets/images/buttons/horse-logo.svg"
-                            alt="dog-logo" width="25px" height="auto" loading="eager">
+                            alt="shop-logo" width="25px" height="auto" loading="eager">
                     </div>
                 </div>
             </a>
-            <a href="/hound">
+            <a href="/en/hound">
                 <div class="button-container">
                     <div class="button-logo">
                         <img aria-hidden="true" decoding="async" src="/assets/images/buttons/dog.svg" alt="horse-logo"
@@ -59,7 +58,7 @@ order: 100
                     </div>
                 </div>
             </a>
-            <a href="/human">
+            <a href="/en/human">
                 <div class="button-container">
                     <div class="button-logo">
                         <img aria-hidden="true" decoding="async" src="/assets/images/buttons/human.svg" alt="rider-logo"
@@ -78,9 +77,9 @@ order: 100
 
     <!-- Background Image -->
     <picture class="kg-hero-picture">
-        <source media="(max-width: 1000px)" srcset="/assets/images/landing-desktop.jpg">
+        <source media="(max-width: 1000px)" srcset="/assets/images/landing-mobile.jpg">
         <source media="(min-width: 1001px)" srcset="/assets/images/landing-desktop.jpg">
-        <img aria-hidden="true" decoding="async" src="/assets/images/landing-desktop.jpg" alt="Elizabete" width="100%"
+        <img aria-hidden="true" decoding="async" src="/assets/images/landing-mobile.jpg" alt="Elizabete" width="100%"
             height="auto" loading="eager">
     </picture>
 </section>
@@ -93,60 +92,55 @@ order: 100
     <div class="cs-container">
         <div class="text-container">
             <article>
-                <h2>Over 3HPhysio</h2>
+                <h2>About 3HPhysio</h2>
                 <p>
-                    Met <strong>3HPhysio</strong> ben ik gespecialiseerd in fysiotherapie voor paarden, honden en
-                    mensen. Zo help ik ze
-                    om beter te bewegen, beter te laten voelen en gelukkiger te laten leven.
+                    At <strong>3HPhysio</strong>, we specialize in physiotherapy for horses, hounds, and humans—helping
+                    them move better,
+                    feel better, and live happier lives.
                 </p>
                 <p>
-                    Ik, <strong>Elizabete</strong>, heb 3Hphysio opgericht om een toegewijde fysiotherapeut te zijnmet
-                    expertise in zowel
-                    menselijke als dierlijke revalidatie. ik bied op maat gemaakte behandelingen gericht op mobiliteit,
-                    kracht en algemeen welzijn. Met een levenslange passie voor dieren en jarenlange ervaring in de
-                    paardensport en fysiotherapie, combineer ik kennis, ervaring en zorg om aan de unieke behoeften van
-                    elke patiënt te voldoen.
+                    Founded by <strong>Elizabete</strong>, a dedicated physiotherapist with
+                    expertise in both human and animal rehabilitation, 3HPhysio offers tailored treatments that focus on
+                    mobility, strength, and overall well-being.
+
+                    With a lifelong passion for animals and years of experience in equestrian sports and physiotherapy,
+                    Elizabete combines knowledge and care to support every patient's unique needs.
                 </p>
                 <p>
-                    Of u nu de prestaties van uw paard wilt verbeteren, uw hond wilt helpen herstellen van een blessure,
-                    of zelf soepeler wilt bewegen: Ik sta met 3HPhysio voor u klaar.
+                    Whether you're looking to improve your horse's performance, help your dog recover from an injury,
+                    or enhance your own movement, 3HPhysio is here to help.
                 </p>
-                <a href="/about">Lees meer</a>
+                <a href="/en/about">Read more about Elizabete</a>
             </article>
         </div>
         <div class="img-container">
             <picture>
                 <img aria-hidden="true" decoding="async" src="/assets/images/about.jpeg"
-                    alt="Animal physiotherapist Elizabete" width="100%" height="auto" loading="eager">
+                    alt="Animal physiotherapist Elizabete" width="100%" height="auto" loading="eager"
+                    style="max-height: 700px;">
             </picture>
         </div>
     </div>
 </section>
 
-
-
 <section id="training">
     <div class="image-full-width">
-        <picture>
-            <source media="(max-width: 1100px)" srcset="/assets/images/hand.jpg">
-            <source media="(min-width: 1101px)" srcset="/assets/images/horse-physio.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/hand.jpg" alt="Back treatment of a horse"
-                width="100%" height="auto" loading="eager">
-        </picture>
+        <img aria-hidden="true" decoding="async" src="/assets/images/horse-physio.jpg" alt="Back treatment of a horse"
+            width="100%" height="auto" loading="eager">
     </div>
     <div class="text-full-width">
         <div class="text-container">
             <h2>Horse, Hound, Human </h2>
-            <p>3HPhysio biedt professionele fysiotherapie voor paarden, honden en mensen, met als doel sterkere,
-                gezondere en meer harmonieuze samenwerkingen. </p>
+            <p>3HPhysio provides professional physiotherapy services for humans, dogs, and horses, helping to build
+                stronger, healthier, and more harmonious partnerships. </p>
             <ul>
-                <li>Voorkomen van blessures en sneller herstel</li>
-                <li>Verbeterde mobiliteit en spierflexibiliteit</li>
-                <li>Pijnverlichting en algemeen welzijn</li>
-                <li>Verbeterde levenskwaliteit voor oudere en actieve dieren</li>
-                <li>Geoptimaliseerde sportprestaties</li>
+                <li>Injury prevention and faster recovery</li>
+                <li>Improved mobility and muscle flexibility</li>
+                <li>Pain relief and overall well-being</li>
+                <li>Improved quality of life for senior and active animals</li>
+                <li>Optimized sports performance</li>
             </ul>
-            <a href="/contact">Neem contact op</a>
+            <a href="/en/contact">Contact 3HPhysio</a>
         </div>
     </div>
 </section>
@@ -158,11 +152,11 @@ order: 100
 <section id="services-448">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Fysiotherapie in Nederland</h2>
+            <h2 class="cs-title">Physiotherapy in the Netherlands</h2>
             <p class="cs-text">
-                Bij 3HPhysio bied ik gespecialiseerde fysiotherapie aan op locatie, door heel Nederland. Of u nu
-                herstelt van een blessure, sportprestaties wilt verbeteren of werkt aan langdurige gezondheid: onze
-                programma’s worden afgestemd op uw specifieke behoeften.
+                At 3HPhysio, we offer specialized physiotherapy services for horses, dogs, and humans across the
+                Netherlands. Whether you are seeking rehabilitation after an injury, improving athletic performance, or
+                supporting long-term health, our tailored programs are designed to meet individual needs.
             </p>
         </div>
         <ul class="cs-card-group">
@@ -172,11 +166,12 @@ order: 100
                         <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
                             src="/assets/images/buttons/horse-logo.svg" alt="icon" width="70" height="70">
                     </picture>
-                    <h3 class="cs-h3">Paard</h3>
-                    <p class="cs-item-text">Persoonlijke revalidatie na blessure, prestatieverbetering voor sport- of
-                        recreatiepaarden, preventieve zorg en mobiliteitsbevordering voor paarden van alle leeftijden en
-                        disciplines.</p>
-                    <a href="/horse" class="cs-link">Lees meer</a>
+                    <h3 class="cs-h3">Horse</h3>
+                    <p class="cs-item-text"> Personalized rehabilitation after injury, performance optimization for
+                        sport or
+                        recreational horses,
+                        preventative care, and mobility improvement for horses of all ages and disciplines.</p>
+                    <a href="/en/horse" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
                     <source media="(max-width: 600px)" srcset="/assets/images/services-horse.jpg">
@@ -191,11 +186,11 @@ order: 100
                         <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
                             src="/assets/images/buttons/dog.svg" alt="icon" width="70" height="70">
                     </picture>
-                    <h3 class="cs-h3">Hond</h3>
-                    <p class="cs-item-text">Ondersteuning bij herstel na operatie of blessure, mobiliteitsbehoud voor
-                        oudere honden, sportbegeleiding voor werk- en sporthonden, en gedragsverbetering door fysieke
-                        gezondheid.</p>
-                    <a href="/hound" class="cs-link">Lees meer</a>
+                    <h3 class="cs-h3">Hound</h3>
+                    <p class="cs-item-text">Recovery support after surgery or injury, mobility maintenance for senior
+                        dogs, athletic support for working and sporting dogs, and behavioral well-being through physical
+                        health.</p>
+                    <a href="/en/hound" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
                     <source media="(max-width: 600px)" srcset="/assets/images/dog.jpeg">
@@ -210,12 +205,11 @@ order: 100
                         <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
                             src="/assets/images/buttons/human.svg" alt="icon" width="70" height="70">
                     </picture>
-                    <h3 class="cs-h3">Mens</h3>
-                    <p class="cs-item-text">Behandeling van klachten aan het bewegingsapparaat, herstel na
-                        sportblessures, houdingscorrectie en krachttraining – met name gericht op ruiters en actieve
-                        mensen.
+                    <h3 class="cs-h3">Human</h3>
+                    <p class="cs-item-text">Treatment of musculoskeletal issues, recovery after sports injuries, posture
+                        correction, and strength training programs designed for riders and active individuals.
                     </p>
-                    <a href="/human" class="cs-link">Lees meer</a>
+                    <a href="/en/human" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
                     <source media="(max-width: 600px)" srcset="/assets/images/human.jpeg">

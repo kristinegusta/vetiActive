@@ -1,9 +1,12 @@
 ---
-title: 'Prijslijst'
-description: 'Bekijk onze concurrerende fysiotherapietarieven voor paarden, honden en mensen in Nederland. Transparante
-prijzen voor consulten, behandelingen en vervolgsessies. Boek vandaag nog je afspraak.'
-preloadImg: '/assets/images/about-us.jpg'
-permalink: 'price/'
+title: 'Pricelist'
+description: 'View our competitive physiotherapy rates for horses, dogs, and humans in the Netherlands. Transparent
+pricing for consultations, treatments, and follow-up sessions. Book your appointment today.'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: '/en/price/'
+eleventyNavigation:
+key: Pricelist
+order: 700
 ---
 
 {% extends "layouts/base.html" %}
@@ -11,7 +14,6 @@ permalink: 'price/'
 {% block head %}
 <link rel="stylesheet" href="/assets/css/pricing.css">
 <link rel="stylesheet" href="/assets/css/interior.css">
-
 {% endblock %}
 
 {% block body %}
@@ -20,7 +22,7 @@ permalink: 'price/'
 <!-- ============================================ -->
 
 <section id="int-hero">
-    <h1 id="home-h">Prijslijst</h1>
+    <h1 id="home-h">Prices</h1>
     <picture>
         <source media="(max-width: 600px)" srcset="/assets/images/about-us.jpg">
         <source media="(min-width: 601px)" srcset="/assets/images/about-us.jpg">
@@ -29,7 +31,6 @@ permalink: 'price/'
 
 </section>
 
-
 <!-- ============================================ -->
 <!--                   Pricing                    -->
 <!-- ============================================ -->
@@ -37,31 +38,28 @@ permalink: 'price/'
 <section id="pricing-1087">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Simpel en transparante tarieven</h2>
+            <h2 class="cs-title">Simple & transparent pricing</h2>
             <p class="cs-text">
-                Met 3HPhysio geloof ik in toegankelijke en heldere zorg. Daarom hanteren we duidelijke tarieven zonder
-                verborgen kosten, zodat u zeker weet waar u aan toe bent – voor uzelf of voor de zorg van uw dier. Mijn
-                doel is om fysiotherapie van hoge kwaliteit te bieden zonder verrassingen, zodat u verzekerd bent van de
-                beste behandeling voor een eerlijke prijs.
+                At 3HPhysio, we believe in making our services accessible and straightforward. We offer clear,
+                no-hidden-cost pricing, so you can be confident in the value you're receiving for your horse's care. Our
+                goal is to provide high-quality physiotherapy services without any surprises, ensuring your horse gets
+                the best treatment at a fair price.
             </p>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <div class="button-logo">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/buttons/dog.svg" alt="dog-logo"
-                        width="25px" height="auto" loading="eager">
-                </div>
-                <span class="cs-package">Hondenfysiotherapie</span>
+
+                <span class="cs-package">Dog Physiotherapy</span>
                 <span class="cs-price">€75.00</span>
                 <p class="cs-item-p">
-                    Eerste consult (45 - 60 min)
+                    Initial Consultation (45 - 60 min)
                 </p>
                 <span class="cs-price">€49.00</span>
                 <p class="cs-item-p">
-                    Fysiotherapie consult
+                    Physiotherapy Consultation
                 </p>
                 <ul class="cs-ul">
-                    <span class="cs-package">Reiskosten vanaf Gouda</span>
+                    <span class="cs-package">Travel costs from Gouda</span>
                     <li class="cs-li">
                         <span>0..10 km</span>
                         <span>€0.00</span>
@@ -79,34 +77,30 @@ permalink: 'price/'
                         <span>€15.00</span>
                     </li>
                 </ul>
-                <a href="/contact" class="cs-button-solid cs-price-button">Maak een afspraak</a>
+                <a href="/en/contact" class="cs-button-solid cs-price-button">Book appointment</a>
             </li>
             <li class="cs-item cs-popular">
-                <div class="button-logo">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/buttons/horse-logo.svg" alt="shop-logo"
-                        width="25px" height="auto" loading="eager">
-                </div>
-                <span class="cs-package">Paardenfysiotherapie</span>
+                <span class="cs-package">Horse Physiotherapy</span>
                 <div class="cd-price-container">
                     <span class="cs-price">€105.00</span>
                     <p class="cs-item-p">
-                        Eerste consult (60 - 90 min)
+                        Initial Consultation (60 - 90 min)
                     </p>
                 </div>
                 <div class="cd-price-container">
                     <span class="cs-price">€105.00</span>
                     <p class="cs-item-p">
-                        Behandelingssessie (45 - 60 min)
+                        Treatment Session (45 - 60 min)
                     </p>
                 </div>
                 <div class="cd-price-container">
                     <span class="cs-price">€45.00</span>
                     <p class="cs-item-p">
-                        Revalidatietraining/ grondwerktraining
+                        Rehabilitation training/groundwork
                     </p>
                 </div>
                 <ul class="cs-ul">
-                    <span class="cs-package">Reiskosten vanaf Gouda</span>
+                    <span class="cs-package">Travel costs from Gouda</span>
                     <li class="cs-li">
                         <span>0..10 km</span>
                         <span>€0.00</span>
@@ -124,26 +118,18 @@ permalink: 'price/'
                         <span>€15.00</span>
                     </li>
                 </ul>
-                <a href="/contact" class="cs-button-solid cs-price-button">Maak een afspraak</a>
+                <a href="/en/contact" class="cs-button-solid cs-price-button">Book Appointment</a>
             </li>
             <li class="cs-item">
-                <div class="button-logo">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/buttons/human.svg" alt="human-logo"
-                        width="25px" height="auto" loading="eager">
-                </div>
-                <span class="cs-package">Fysiotherapie voor mensen</span>
-                <span class="cs-price">Op aanvraag</span>
+                <span class="cs-package">Human Physiotherapy</span>
+                <span class="cs-price">On request</span>
                 <p class="cs-item-p">
-                    Consult, behandeling en advies afgestemd op uw behoeften
+                    Consultation and advice tailored for your needs
                 </p>
-                <a href="/contact" class="cs-button-solid cs-price-button">Maak een afspraak</a>
+                <a href="/en/contact" class="cs-button-solid cs-price-button">Book Appointment</a>
             </li>
         </ul>
     </div>
 </section>
-
-
-
-
 
 {% endblock %}

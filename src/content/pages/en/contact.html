@@ -1,11 +1,10 @@
 ---
 title: 'Contact'
-description: 'Neem contact op met 3HPhysio voor professionele fysiotherapeutische diensten in Nederland. Boek consulten
-voor paarden-,
-honden- of mensenfysiotherapie. Deskundige zorg door gediplomeerd fysiotherapeut Elizabete.'
+description: 'Contact 3HPhysio for professional physiotherapy services in the Netherlands. Book consultations for horse,
+dog, or human physiotherapy. Expert care by qualified physiotherapist Elizabete.'
 preloadImg: '/assets/images/about-us.jpg'
-lang: nl
-permalink: '/contact/'
+lang: en
+permalink: '/en/contact/'
 ---
 
 {% extends "layouts/base.html" %}
@@ -16,12 +15,11 @@ permalink: '/contact/'
 {% endblock %}
 
 {% block body %}
-
 <!-- ============================================ -->
 <!--                    LANDING                   -->
 <!-- ============================================ -->
 <section id="int-hero">
-    <h1 id="home-h">Neem contact met mij op</h1>
+    <h1 id="home-h">Get in touch</h1>
     <picture>
         <source media="(max-width: 600px)" srcset="/assets/images/about-us.jpg">
         <source media="(min-width: 601px)" srcset="/assets/images/about-us.jpg">
@@ -33,17 +31,16 @@ permalink: '/contact/'
 <!--                Contact Form                  -->
 <!-- ============================================ -->
 
-
 <section id="contact-1388">
     <div class="cs-container">
         <div class="cs-content">
-            <!-- <span class="cs-topper">Dogs and horses treated at your location</span> -->
-            <h2 class="cs-title">Wilt u een afspraak maken of heft u nog vragen?</h2>
+            <h2 class="cs-title">Would you like to book a treatment or have any questions?</h2>
             <p class="cs-text">
-                Ik wil met 3HPhysio hulp op topniveau bieden voor uzelf, hond of paard. Of u nu advies zoekt, een vraag
-                heeft of graag een afspraak wil plannen, ik sta paraat om u te helpen.
+                At 3HPhysio, we're passionate about providing top-tier physiotherapy care for your horse. Whether you
+                need advice, have questions, or are ready to schedule an appointment, our team is here to assist you.
+                Let us help your horse recover, perform, and feel their best!
             </p>
-            <h3>Gesproken talen</h3>
+            <h3>Languages spoken</h3>
             <div class="cs-languages">
                 <div class="cs-languages-wrapper">
                     <p>
@@ -57,20 +54,18 @@ permalink: '/contact/'
                 <div class="cs-languages-wrapper">
                     <p>Dutch</p>
                     <picture class="">
-                        <img aria-hidden="true" src="/assets/images/buttons/netherlands.svg" alt="uk flag"
+                        <img aria-hidden="true" src="/assets/images/buttons/netherlands.svg" alt="netherlands flag"
                             class="cs-icon" width="40" height="40" decoding="async">
                     </picture>
                 </div>
                 <div class="cs-languages-wrapper">
                     <p>Latvian</p>
                     <picture class="">
-                        <img aria-hidden="true" src="/assets/images/buttons/latvia.svg" alt="uk flag" class="cs-icon"
-                            width="40" height="40" decoding="async">
+                        <img aria-hidden="true" src="/assets/images/buttons/latvia.svg" alt="latvia flag"
+                            class="cs-icon" width="40" height="40" decoding="async">
                     </picture>
                 </div>
-
             </div>
-
             <ul class="cs-ul">
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
@@ -78,9 +73,7 @@ permalink: '/contact/'
                             width="40" height="40" decoding="async">
                     </picture>
                     <div class="cs-flex-group">
-                        <a href="tel:+31622132763
-                        " class="cs-header">+31 622132763
-                        </a>
+                        <a href="tel:+31622132763" class="cs-header">+31 622132763</a>
                     </div>
                 </li>
                 <li class="cs-li">
@@ -97,29 +90,28 @@ permalink: '/contact/'
         <!--Form-->
         <form class="cs-form" id="cs-form-1388" name="Contact" method="post" netlify>
             <label class="cs-label">
-                Naam
+                Name
                 <input class="cs-input" required type="text" id="name-1388" name="name"
-                    placeholder="Geef uw volledige naam op">
+                    placeholder="Please provide your full name">
             </label>
             <label class="cs-label cs-email">
                 Email
                 <input class="cs-input" required type="email" id="email-1388" name="email"
-                    placeholder="Geef uw e-mailadres in voor follow-up">
+                    placeholder="Enter your email address for follow-up">
             </label>
             <label class="cs-label cs-phone">
-                Telefoon
+                Phone
                 <input class="cs-input" required type="text" id="phone-1388" name="phone"
-                    placeholder="Geef uw nummer op">
+                    placeholder="Provide your number">
             </label>
             <label class="cs-label">
-                Bericht
+                Message
                 <textarea class="cs-input cs-textarea" required name="Message" id="message-1388"
-                    placeholder="Schrijf een bericht of vraag..."></textarea>
+                    placeholder="Write message or question that you have..."></textarea>
             </label>
-            <button class="cs-button-solid cs-submit" type="submit">Bericht sturen</button>
+            <button class="cs-button-solid cs-submit" type="submit">Send message</button>
         </form>
     </div>
 </section>
-
 
 {% endblock %}

@@ -24,9 +24,7 @@ function ariaExpanded() {
 }
 
 // mobile nav toggle code
-const dropDowns = Array.from(
-  document.querySelectorAll("#cs-navigation .cs-dropdown")
-);
+const dropDowns = Array.from(document.querySelectorAll("#cs-navigation .cs-dropdown"));
 for (const item of dropDowns) {
   const onClick = () => {
     item.classList.toggle("cs-active");
@@ -43,5 +41,31 @@ window.addEventListener("scroll", function () {
     navbar.style.backgroundColor = "var(--headerColor)";
   } else {
     navbar.style.backgroundColor = "transparent";
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const langSwitcher = document.getElementById('lang-switcher');
+  if (langSwitcher) {
+    langSwitcher.addEventListener('click', function() {
+      const path = window.location.pathname;
+      console.log('Language switcher clicked. Current path:', path);
+      let newPath;
+      if (path.startsWith('/en/')) {
+        newPath = path.replace(/^\/en\//, '/');
+        console.log('Switching to Dutch. New path:', newPath);
+      } else if (path === '/en') {
+        newPath = '/';
+        console.log('Switching to Dutch. New path: /');
+      } else {
+        if (path === '/') {
+          newPath = '/en/';
+        } else {
+          newPath = '/en' + path;
+        }
+        console.log('Switching to English. New path:', newPath);
+      }
+      window.location.assign(newPath);
+    });
   }
 });
