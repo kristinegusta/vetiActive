@@ -2,12 +2,13 @@
 
 3HPhysio website
 
+To work on it:
 
-To work on it: 
-
-** Clone the repo and cd
-** npm build & npm start
-** Server at http://localhost:8080/
-** Everything pushed to main in automatically deployed on Netlify :)
+1. Clone the repo and `cd` into it.
+2. Run:
+   - `npm build`
+   - `npm start`
+3. Server runs at: http://localhost:8080/
+4. Everything pushed to `main` is automatically deployed on Netlify :)
 
 
