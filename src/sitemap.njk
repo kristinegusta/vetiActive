@@ -6,9 +6,14 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {%- for page in collections.all %}
-  {%- if not page.data.eleventyExcludeFromCollections %}
+  {%- if not page.data.eleventyExcludeFromCollections 
+         and not page.url.includes('/blog/')
+         and not page.url.includes('/admin/')
+         and not page.url.includes('/tirgus/')
+         and page.url != '/sitemap.xml'
+         and page.url != '/robots.txt' %}
   <url>
-    <loc>{{ site.url }}{{ page.url | url }}</loc>
+    <loc>https://3hphysio.nl{{ page.url }}</loc>
     <lastmod>{{ page.date.toISOString() }}</lastmod>
     {%- if page.url == '/' or page.url == '/en/' %}
     <changefreq>weekly</changefreq>
@@ -24,10 +29,23 @@ eleventyExcludeFromCollections: true
     <priority>0.7</priority>
     {%- endif %}
     {%- if page.data.lang %}
-    {%- set basePath = page.url | replace('/en/', '/') | replace('/nl/', '/') %}
-    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ basePath }}"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="{{ site.url }}{{ basePath }}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/en{{ basePath }}"/>
+    {# Detect if current page is English or Dutch #}
+    {%- if '/en/' in page.url or page.url == '/en' %}
+      {# Current page is ENGLISH - strip /en to get NL version #}
+      {%- set nlUrl = page.url | replace('/en/', '/') | replace('/en', '/') %}
+      {%- set enUrl = page.url %}
+    {%- else %}
+      {# Current page is DUTCH - add /en to get EN version #}
+      {%- set nlUrl = page.url %}
+      {%- if page.url == '/' %}
+        {%- set enUrl = '/en/' %}
+      {%- else %}
+        {%- set enUrl = '/en' + page.url %}
+      {%- endif %}
+    {%- endif %}
+    <xhtml:link rel="alternate" hreflang="en" href="https://3hphysio.nl{{ enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://3hphysio.nl{{ nlUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3hphysio.nl{{ enUrl }}"/>
     {%- endif %}
   </url>
   {%- endif %}
