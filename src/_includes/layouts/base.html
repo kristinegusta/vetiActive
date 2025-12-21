@@ -1,50 +1,93 @@
 <!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or 'en' }}">
+
 
 <head>
     <!-- Standard meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags  -->
     <meta name="description" content="{{ description }}">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="{{ author or client.author }}">
+    <meta name="robots" content="{{ robots or 'index, follow' }}">
+
+
+    
+    <!-- Google Site Verification -->
     <meta name="google-site-verification" content="J2FD71-esxjFVqUVyRuzOw5DKjtNAIhZfWE6BrGKrqE" />
-    <link rel="canonical" href="https://{{ client.domain }}{{ page.url }}">
-
-    <!--Social Media Display-->
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:description" content="{{ description }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://{{ client.domain }}{{ page.url }}" />
-    <meta property="og:image" content="/assets/images/logo/logo_no_text.png" />
-    <meta property="og:image:secure_url" content="/assets/images/logo/logo_no_text.png" />
-
-    <!--Favicons-->
+    
+    <!-- Canonical URL  -->
+    <link rel="canonical" href="{{ canonical or ('https://' + client.domain + page.url) }}">
+      
+    <!-- Alternate Language URLs - FIXED -->
+    {% if '/en/' in page.url or page.url == '/en' %}
+      {# Current page is ENGLISH - strip /en to get NL version #}
+      {% set nlUrl = page.url | replace('/en/', '/') | replace('/en', '/') %}
+      {% set enUrl = page.url %}
+    {% else %}
+      {# Current page is DUTCH - add /en to get EN version #}
+      {% set nlUrl = page.url %}
+      {% if page.url == '/' %}
+        {% set enUrl = '/en/' %}
+      {% else %}
+        {% set enUrl = '/en' + page.url %}
+      {% endif %}
+    {% endif %}
+    <link rel="alternate" hreflang="en" href="https://{{ client.domain }}{{ enUrl }}">
+    <link rel="alternate" hreflang="nl" href="https://{{ client.domain }}{{ nlUrl }}">
+    <link rel="alternate" hreflang="x-default" href="https://{{ client.domain }}{{ enUrl }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ og_type or 'website' }}">
+    <meta property="og:url" content="{{ canonical or ('https://' + client.domain + page.url) }}">
+    <meta property="og:title" content="{{ og_title or title }}">
+    <meta property="og:description" content="{{ og_description or description }}">
+    <meta property="og:image" content="https://{{ client.domain }}{{ og_image or '/assets/images/logo/logo_no_text.png' }}">
+    <meta property="og:image:secure_url" content="https://{{ client.domain }}{{ og_image or '/assets/images/logo/logo_no_text.png' }}">
+    <meta property="og:locale" content="{% if lang == 'nl' %}nl_NL{% else %}en_US{% endif %}">
+    <meta property="og:site_name" content="{{ client.name }}">
+    
+    <!-- Twitter Card  -->
+    <meta name="twitter:card" content="{{ twitter_card or 'summary_large_image' }}">
+    <meta name="twitter:url" content="{{ canonical or ('https://' + client.domain + page.url) }}">
+    <meta name="twitter:title" content="{{ og_title or title }}">
+    <meta name="twitter:description" content="{{ og_description or description }}">
+    <meta name="twitter:image" content="https://{{ client.domain }}{{ og_image or '/assets/images/logo/logo_no_text.png' }}">
+    
+    <!-- Geo Location Meta -->
+    <meta name="geo.region" content="NL">
+    <meta name="geo.placename" content="Netherlands">
+    
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo/logo_no_text.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo/logo_no_text.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo/logo_no_text.png">
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
+    
     <!-- Preloads -->
-    <!-- <link rel="preload" as="image" href="/assets/svgs/landing-mobile.jpg"> -->
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/montserrat-v26-latin-regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/montserrat-v26-latin-700.woff2" crossorigin>
-
+    
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     {% if preloadImg != '' %}
     <link rel="preload" as="image" href="{{ preloadImg }}" />
     {% endif %}
-
+    
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css">
     <link rel="stylesheet" href="/assets/css/navigation.css">
     <script defer src="/assets/js/nav.js"></script>
-
+    
+    <!-- Page-specific head content -->
     {% block head %}{% endblock %}
+    
+    <!-- Title  -->
     <title>
         {% if page.url == '/'%}
         {{ title }}
@@ -56,35 +99,46 @@
         {{ client.name }}
         {% endif %}
     </title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT08VHMG1J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LT08VHMG1J');
+    </script>
+
 </head>
 
 <body>
     <!--Screen reader skip main nav-->
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
-
+    
     {% if page.url and '/en' in page.url %}
     {% include "components/header-en.html" %}
     {% else %}
     {% include "components/header.html" %}
     {% endif %}
+    
     <main id="main">
         {% block body %}{% endblock %}
     </main>
+    
     {% if '/contact' not in page.url and '/en' not in page.url %}
     {% include "components/cta.html" %}
     {% elif page.url != '/en/contact/' and '/en' in page.url %}
     {% include "components/cta-en.html" %}
     {% endif %}
-
+    
     {% if page.url and '/en' in page.url %}
     {% include "components/footer-en.html" %}
     {% else %}
     {% include "components/footer.html" %}
     {% endif %}
-
-    <!--Schema markup KGB-->
+    
+    <!--Schema markup-->
     {% include "components/schema.html" %}
-
 </body>
-
 </html>
+

@@ -1,15 +1,8 @@
 {
-	"name": "3HPhysio",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
-	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
-	},
-	"domain": "www.codestitch.app"
+  "name": "3HPhysio",
+  "domain": "3hphysio.nl",
+  "author": "Elizabete - 3HPhysio",
+  "default_og_image": "/assets/images/logo/logo_no_text.png",
+  "default_twitter_card": "summary_large_image",
+  "geo_region": "NL"
 }

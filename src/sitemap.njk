@@ -1,0 +1,35 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for page in collections.all %}
+  {%- if not page.data.eleventyExcludeFromCollections %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    {%- if page.url == '/' or page.url == '/en/' %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    {%- elif page.url.includes('/contact') %}
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    {%- elif page.url.includes('/about') or page.url.includes('/horse') or page.url.includes('/hound') or page.url.includes('/human') %}
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    {%- else %}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    {%- endif %}
+    {%- if page.data.lang %}
+    {%- set basePath = page.url | replace('/en/', '/') | replace('/nl/', '/') %}
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ basePath }}"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="{{ site.url }}{{ basePath }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/en{{ basePath }}"/>
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>

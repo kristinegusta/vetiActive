@@ -1,0 +1,32 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# 3HPhysio Robots.txt
+# https://3hphysio.nl
+
+User-agent: *
+Allow: /
+
+# Disallow admin and CMS areas
+Disallow: /admin/
+Disallow: /netlify/
+
+# Disallow file types
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Allow specific important files
+Allow: /sitemap.xml
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap location
+Sitemap: https://3hphysio.nl/sitemap.xml
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
