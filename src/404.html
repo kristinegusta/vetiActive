@@ -1,0 +1,60 @@
+---
+title: 'Page Not Found | 3HPhysio'
+description: 'The page you are looking for could not be found. Return to 3HPhysio homepage for physiotherapy services for horses, dogs, and humans in the Netherlands.'
+permalink: '/404.html'
+eleventyExcludeFromCollections: true
+robots: 'noindex, nofollow'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<style>
+    #error-page {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+    }
+    #error-page h1 {
+        font-size: clamp(3rem, 10vw, 6rem);
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+    }
+    #error-page h2 {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+        margin-bottom: 1.5rem;
+        color: var(--headerColor);
+    }
+    #error-page p {
+        max-width: 500px;
+        margin-bottom: 2rem;
+        color: var(--bodyTextColor);
+    }
+    #error-page .cs-button-solid {
+        display: inline-block;
+        padding: 0.875rem 1.5rem;
+        background-color: var(--primary);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        font-weight: 700;
+        transition: background-color 0.3s;
+    }
+    #error-page .cs-button-solid:hover {
+        background-color: var(--primaryDark);
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section id="error-page">
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>Sorry, the page you are looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <a href="/" class="cs-button-solid">Back to Homepage</a>
+</section>
+{% endblock %}

@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
          and page.url != '/sitemap.xml'
          and page.url != '/robots.txt' %}
   <url>
-    <loc>https://3hphysio.nl{{ page.url }}</loc>
+    <loc>https://{{ client.domain }}{{ page.url }}</loc>
     <lastmod>{{ page.date.toISOString() }}</lastmod>
     {%- if page.url == '/' or page.url == '/en/' %}
     <changefreq>weekly</changefreq>
@@ -43,9 +43,9 @@ eleventyExcludeFromCollections: true
         {%- set enUrl = '/en' + page.url %}
       {%- endif %}
     {%- endif %}
-    <xhtml:link rel="alternate" hreflang="en" href="https://3hphysio.nl{{ enUrl }}"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://3hphysio.nl{{ nlUrl }}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://3hphysio.nl{{ enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{ client.domain }}{{ enUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://{{ client.domain }}{{ nlUrl }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{ client.domain }}{{ enUrl }}"/>
     {%- endif %}
   </url>
   {%- endif %}

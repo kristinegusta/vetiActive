@@ -1,0 +1,101 @@
+<!-- Pricing Schema Markup for 3HPhysio -->
+{% if page.url == '/price/' or page.url == '/en/price/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PriceSpecification",
+  "name": "3HPhysio {% if lang == 'nl' %}Prijslijst{% else %}Price List{% endif %}",
+  "url": "https://{{ client.domain }}{{ page.url }}",
+  "provider": {
+    "@type": "MedicalBusiness",
+    "name": "3HPhysio",
+    "url": "https://{{ client.domain }}"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "{% if lang == 'nl' %}Fysiotherapie Diensten{% else %}Physiotherapy Services{% endif %}",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "{% if lang == 'nl' %}Hondenfysiotherapie{% else %}Dog Physiotherapy{% endif %}",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{% if lang == 'nl' %}Eerste consult (45-60 min){% else %}Initial Consultation (45-60 min){% endif %}"
+            },
+            "price": "75.00",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{% if lang == 'nl' %}Fysiotherapie consult{% else %}Physiotherapy Consultation{% endif %}"
+            },
+            "price": "49.00",
+            "priceCurrency": "EUR"
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "{% if lang == 'nl' %}Paardenfysiotherapie{% else %}Horse Physiotherapy{% endif %}",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{% if lang == 'nl' %}Eerste consult (60-90 min){% else %}Initial Consultation (60-90 min){% endif %}"
+            },
+            "price": "95.00",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{% if lang == 'nl' %}Behandelingssessie (45-60 min){% else %}Treatment Session (45-60 min){% endif %}"
+            },
+            "price": "85.00",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{% if lang == 'nl' %}Revalidatietraining/grondwerktraining{% else %}Rehabilitation/Groundwork Training{% endif %}"
+            },
+            "price": "45.00",
+            "priceCurrency": "EUR"
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "{% if lang == 'nl' %}Fysiotherapie voor mensen{% else %}Human Physiotherapy{% endif %}",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{% if lang == 'nl' %}Consult en behandeling{% else %}Consultation and Treatment{% endif %}"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "eligibleTransactionVolume": {
+                "@type": "PriceSpecification",
+                "description": "{% if lang == 'nl' %}Op aanvraag{% else %}On request{% endif %}"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+</script>
+{% endif %}

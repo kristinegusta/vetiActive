@@ -1,0 +1,53 @@
+<!-- Service-specific Schema Markup -->
+{% if serviceType %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "{{ serviceType }}",
+  "name": "{{ serviceName }}",
+  "description": "{{ serviceDescription }}",
+  "provider": {
+    "@type": "MedicalBusiness",
+    "name": "3HPhysio",
+    "url": "https://3hphysio.nl",
+    "telephone": "+31622132763",
+    "email": "info@3hphysio.nl"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Netherlands"
+  },
+  "url": "https://3hphysio.nl{{ page.url }}",
+  "image": "https://3hphysio.nl{{ og_image }}"
+}
+</script>
+{% endif %}
+
+<!-- Review Schema for pages with testimonials -->
+{% if hasReview %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Service",
+    "name": "{{ serviceName }}",
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "3HPhysio"
+    }
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ reviewAuthor }}"
+  },
+  "reviewBody": "{{ reviewText }}"
+}
+</script>
+{% endif %}
