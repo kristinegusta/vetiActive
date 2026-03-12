@@ -1,0 +1,107 @@
+/* PAGE-SPECIFIC STYLES FOR THE LASER THERAPY PAGE */
+
+/*-- -------------------------- -->
+<---        Laser Intro          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #laser-intro {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(800 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: clamp(1rem, 2vw, 1.5rem);
+        }
+
+        .cs-title {
+            color: var(--headerColor);
+            margin: 0 0 calc(8 / 16 * 1rem);
+        }
+
+        .cs-text {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.7em;
+            color: var(--bodyTextColor);
+            margin: 0 0 calc(16 / 16 * 1rem);
+            opacity: 0.8;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Laser Content         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #laser-content {
+        padding: var(--sectionPadding);
+        background-color: #f7f7f7;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(800 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .cs-section {
+            background-color: #fff;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.75rem, 1.5vw, 1rem);
+        }
+
+        .cs-title {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            color: var(--headerColor);
+            margin: 0;
+        }
+
+        .cs-text {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.7em;
+            color: var(--bodyTextColor);
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .cs-list-title {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-weight: 700;
+            color: var(--headerColor);
+            margin: 0;
+        }
+
+        .cs-ul {
+            margin: 0;
+            padding-left: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+        }
+
+        .cs-li {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.6em;
+            color: var(--bodyTextColor);
+            opacity: 0.8;
+        }
+    }
+}
