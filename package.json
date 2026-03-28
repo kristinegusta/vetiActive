@@ -24,7 +24,7 @@
     },
     "homepage": "https://github.com/OakHarbor/Starter-Kit-v4-Eleventy-#readme",
     "devDependencies": {
-        "@11ty/eleventy": "^2.0.1",
+        "@11ty/eleventy": "^3.1.2",
         "@11ty/eleventy-navigation": "^0.3.5"
     },
     "dependencies": {
